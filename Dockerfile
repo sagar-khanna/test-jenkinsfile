@@ -8,7 +8,7 @@ ADD nginx.conf /etc/nginx/
 ADD php-fpm.conf /etc/php5/php-fpm.conf
 ADD run.sh /run.sh
 
-ENV LISTEN_PORT=80
+ENV LISTEN_PORT=88
 
-EXPOSE 80
+EXPOSE 88
 CMD /run.sh
