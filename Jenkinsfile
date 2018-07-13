@@ -6,12 +6,7 @@ pipeline {
     stage('Checkout repo') {
       agent any
       steps {
-        checkout scm: [$class: 'GitSCM',
-            poll: false,
-            branches: [[name: "$BRANCH"]],
-            doGenerateSubmoduleConfigurations: false,
-            userRemoteConfigs: [[refspec: 'refs/changes/*:refs/changes/*',
-                                 url: "git@github.com:sagar-khanna/test-jenkinsfile.git"]]]
+        checkout scm
       }
     }
     stage('Docker Build') {
